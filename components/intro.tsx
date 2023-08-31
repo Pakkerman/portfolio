@@ -2,16 +2,28 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa'
 
+import { useActiveSectionContext } from '@/context/activeSectionContext'
+
 export default function Intro() {
+  const { setActiveSection } = useActiveSectionContext()
+  const { ref, inView } = useInView({ threshold: 0.5 })
+
+  useEffect(() => {
+    if (inView) setActiveSection('Home')
+  }, [inView, setActiveSection])
+
   return (
     <section
       id="home"
+      ref={ref}
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-96">
       <div className="flex items-center justify-center">
         <div className="relative">
