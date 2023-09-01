@@ -34,7 +34,6 @@ export default function Skills() {
             className="px-5 py-3 bg-white border border-black/10 rounded-xl"
             variants={fadeInAnimationVariants}
             initial="initial"
-            animate="animate"
             whileInView="animate"
             viewport={{ once: true }}
             custom={idx}>
