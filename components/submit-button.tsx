@@ -14,7 +14,6 @@ export default function SubmitButton() {
         <div className="w-5 h-5 border-b-2 border-white rounded-full animate-spin" />
       ) : (
         <>
-          {' '}
           Submit{' '}
           <FaPaperPlane className="text-xs transition-all opacity-70 group-hover:scale-125 group-hover:translate-x-[2px] group-hover:-translate-y-[2px]" />
         </>
