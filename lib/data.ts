@@ -2,6 +2,21 @@ import React from 'react'
 import { CgWorkAlt } from 'react-icons/cg'
 import { FaReact } from 'react-icons/fa'
 import { LuGraduationCap } from 'react-icons/lu'
+import {
+  SiCss3,
+  SiFramer,
+  SiGit,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPrisma,
+  SiReact,
+  SiTailwindcss,
+  SiTrpc,
+  SiTypescript,
+} from 'react-icons/si'
 import corpcommentImg from '@/public/corpcomment.png'
 import rmtdevImg from '@/public/rmtdev.png'
 import wordanalyticsImg from '@/public/wordanalytics.png'
@@ -85,23 +100,17 @@ export const projectsData = [
 ] as const
 
 export const skillsData = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Next.js',
-  'Node.js',
-  'Git',
-  'Tailwind',
-  'Prisma',
-  'MongoDB',
-  'Redux',
-  'GraphQL',
-  'Apollo',
-  'Express',
-  'PostgreSQL',
-  'Python',
-  'Django',
-  'Framer Motion',
+  { name: 'HTML', icon: React.createElement(SiHtml5) },
+  { name: 'CSS', icon: React.createElement(SiCss3) },
+  { name: 'JavaScript', icon: React.createElement(SiJavascript) },
+  { name: 'TypeScript', icon: React.createElement(SiTypescript) },
+  { name: 'React', icon: React.createElement(SiReact) },
+  { name: 'Next.js', icon: React.createElement(SiNextdotjs) },
+  { name: 'Node.js', icon: React.createElement(SiNodedotjs) },
+  { name: 'Git', icon: React.createElement(SiGit) },
+  { name: 'Tailwind', icon: React.createElement(SiTailwindcss) },
+  { name: 'Prisma', icon: React.createElement(SiPrisma) },
+  { name: 'MySQL', icon: React.createElement(SiMysql) },
+  { name: 'tRPC', icon: React.createElement(SiTrpc) },
+  { name: 'Framer Motion', icon: React.createElement(SiFramer) },
 ] as const

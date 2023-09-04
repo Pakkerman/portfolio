@@ -31,13 +31,14 @@ export default function Skills() {
         {skillsData.map((item, idx) => (
           <motion.li
             key={idx}
-            className="px-5 py-3 bg-white border border-black/10 rounded-xl"
+            className="flex items-center gap-2 px-5 py-3 bg-white borderBlack rounded-xl"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             custom={idx}>
-            {item}
+            <span className="scale-110">{item.icon}</span>
+            <span className="text-sm text-gray-700">{item.name}</span>
           </motion.li>
         ))}
       </ul>

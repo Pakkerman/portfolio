@@ -9,8 +9,10 @@ import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa'
 
 import { useSectionInView } from '@/lib/hooks'
+import { useActiveSectionContext } from '@/context/activeSectionContext'
 
 export default function Intro() {
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
   const { ref } = useSectionInView('Home', 0.5)
 
   return (
@@ -65,6 +67,10 @@ export default function Intro() {
         transition={{ delay: 0.1 }}>
         <Link
           href="#contact"
+          onClick={() => {
+            setTimeOfLastClick(Date.now())
+            setActiveSection('Contact')
+          }}
           className="flex items-center gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105">
           Contact me here{' '}
           <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />

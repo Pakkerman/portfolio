@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 html{
-   --line-color: #e5e7eb;
+  --line-color: #e5e7eb;
 }
+
+
+.borderBlack{
+  @apply border border-black/10;
+}
+
 
 .pre {@apply bg-red-400 bg-opacity-30 sm:bg-blue-400 sm:bg-opacity-30 md:bg-green-400 md:bg-opacity-30 lg:bg-cyan-400 lg:bg-opacity-30;}
 
