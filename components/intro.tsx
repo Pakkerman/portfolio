@@ -61,7 +61,7 @@ export default function Intro() {
         <span className="underline">React (Next.js)</span>
       </motion.h1>
       <motion.div
-        className="flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
+        className="flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row sm:gap-2"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}>
@@ -83,18 +83,20 @@ export default function Intro() {
           Download CV{' '}
           <HiDownload className="transition group-hover:translate-y-1 opacity-60" />
         </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          className="flex items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10">
-          <BsLinkedin />
-        </a>
-        <a
-          href="https://github.com/Pakkerman"
-          target="_blank"
-          className="flex text-[1.35rem] items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10">
-          <FaGithubSquare />
-        </a>
+        <div className="flex gap-10 sm:gap-2">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            className="flex items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10">
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://github.com/Pakkerman"
+            target="_blank"
+            className="flex text-[1.35rem] items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10">
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   )
