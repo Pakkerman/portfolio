@@ -79,7 +79,7 @@ export default function Intro() {
         <a
           href="/CV.pdf"
           download
-          className="flex items-center gap-2 py-3 transition bg-white border rounded-full outline-none cursor-pointer border-black/10 group px-7 focus:scale-110 hover:scale-110 active:scale-105">
+          className="flex items-center gap-2 py-3 transition bg-white border rounded-full outline-none cursor-pointer border-black/10 group px-7 focus:scale-110 hover:scale-110 active:scale-105 dark:bg-white/10">
           Download CV{' '}
           <HiDownload className="transition group-hover:translate-y-1 opacity-60" />
         </a>
@@ -87,13 +87,13 @@ export default function Intro() {
           <a
             href="https://linkedin.com"
             target="_blank"
-            className="flex items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10">
+            className="flex items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full h-14 w-14 justify-center cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10 dark:text-white/80 dark:bg-white/10">
             <BsLinkedin />
           </a>
           <a
             href="https://github.com/Pakkerman"
             target="_blank"
-            className="flex text-[1.35rem] items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10">
+            className="flex text-[1.35rem] items-center gap-2 p-4 text-gray-950 transition bg-white border dark:text-white/80 rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10 dark:bg-white/10 w-14 h-14 justify-center">
             <FaGithubSquare />
           </a>
         </div>
