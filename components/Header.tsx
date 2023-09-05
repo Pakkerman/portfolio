@@ -33,13 +33,18 @@ export default function Header() {
                   setActiveSection(item.name)
                   setTimeOfLastClick(Date.now())
                 }}
-                className={clsx(
-                  'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-50',
+                // className={` flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition-all  dark:hover:text-gray-50 ${
+                //   activeSection === item.name
+                //     ? 'dark:text-gray-200'
+                //     : 'text-gray-950 dark:text-gray-500'
+                // } `}
+                className={`${clsx(
+                  'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition  dark:hover:text-gray-50',
                   {
-                    'text-gray-950 dark:text-gray-100':
+                    'text-gray-950 dark:text-gray-200':
                       activeSection === item.name,
                   }
-                )}>
+                )}`}>
                 {item.name}
                 {item.name === activeSection && (
                   <motion.span
@@ -49,7 +54,7 @@ export default function Header() {
                       stiffness: 380,
                       damping: 30,
                     }}
-                    className="absolute inset-0 bg-gray-100 rounded-full -z-10 dark:bg-gray-700"
+                    className="absolute inset-0 bg-gray-100 rounded-full borderBlack -z-10 dark:bg-gray-700"
                   />
                 )}
               </Link>

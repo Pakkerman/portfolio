@@ -6,11 +6,17 @@ html{
   --line-color: #e5e7eb;
 }
 
+html.dark {
+  --line-color: rgb(51, 65, 85)
+
+}
+
 
 .borderBlack{
-  @apply border border-black/10 dark:border-white/10;
+  @apply border border-black/10 dark:border-white/10 ;
 }
 
 
 .pre {@apply bg-red-400 bg-opacity-30 sm:bg-blue-400 sm:bg-opacity-30 md:bg-green-400 md:bg-opacity-30 lg:bg-cyan-400 lg:bg-opacity-30;}
+
 
