@@ -43,11 +43,15 @@ export default function Experience() {
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                boxShadow: '0 0 0 3px rgb(100, 116, 139)', // The border of the icon is actually a boxShandow
-                background: theme === 'light' ? 'white' : 'rgb(30, 41, 59)',
+                boxShadow: `0 0 0 4px 
+                ${
+                  theme === 'light' ? '#fff' : 'rgb(100, 116, 139)'
+                }, inset 0 2px 0 rgba( 0, 0, 0, 0.08 ), 0 3px 0 4px rgba(0, 0, 0, 0.05)`,
+                background: theme === 'light' ? '#eeef' : 'rgb(30, 41, 59)',
                 fontSize: '1.5rem',
+                color: theme === 'light' ? '#333f' : '#ddde',
               }}>
-              <h3 className="font-semibold capitalize ">{item.title}</h3>
+              <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}

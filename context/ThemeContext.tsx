@@ -29,7 +29,7 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
     ) as Theme | null
     if (theme) {
       setTheme(theme)
-      document.documentElement.classList.add('dark')
+      if (theme === 'dark') document.documentElement.classList.add('dark')
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setTheme('dark')
       document.documentElement.classList.add('dark')
