@@ -2,8 +2,8 @@
 
 import React from 'react'
 
-import SectionHeading from './section-heading'
-import { Project } from './project'
+import SectionHeading from './SectionHeading'
+import { Project } from './ProjectCard'
 import { projectsData } from '@/lib/data'
 import { useSectionInView } from '@/lib/hooks'
 

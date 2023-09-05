@@ -9,7 +9,7 @@ import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa'
 
 import { useSectionInView } from '@/lib/hooks'
-import { useActiveSectionContext } from '@/context/activeSectionContext'
+import { useActiveSectionContext } from '@/context/ActiveSectionContext'
 
 export default function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
