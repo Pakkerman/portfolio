@@ -3,6 +3,7 @@
 import React from 'react'
 import SectionHeading from './SectionHeading'
 import { motion } from 'framer-motion'
+import { BiCopyAlt } from 'react-icons/bi'
 import { useSectionInView } from '@/lib/hooks'
 import { sendEmail } from '@/actions/sendEmail'
 import SubmitButton from './SubmitButton'
@@ -10,6 +11,11 @@ import toast from 'react-hot-toast'
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact')
+
+  function handleEmailCopyClick() {
+    navigator.clipboard.writeText('pakkermandev@gmail.com')
+    toast.success('Email copied to clipboard!')
+  }
 
   return (
     <motion.section
@@ -24,11 +30,18 @@ export default function Contact() {
       <p className="mb-2 -mt-4 text-gray-700 dark:text-white/80">
         Please Contect me directly at:{' '}
       </p>
-      <a
-        className="block mb-2 font-semibold underline transition-all dark:text-orange-100 dark:hover:text-orange-400"
-        href="mailto:pakkermandev@gmail.com">
-        pakkermandev@gmail.com
-      </a>{' '}
+      <div className="gap-2 flex-center">
+        <a
+          className="gap-2 mb-2 text-lg font-semibold underline transition-all dark:text-orange-100 hover:text-orange-600 dark:hover:text-orange-400"
+          href="mailto:pakkermandev@gmail.com">
+          pakkermandev@gmail.com
+        </a>
+        <button
+          onClick={handleEmailCopyClick}
+          className="p-2 transition-all rounded-full custom-border custom-hover-110 ">
+          <BiCopyAlt />
+        </button>
+      </div>
       <p>or through this form:</p>
       <form
         className="flex flex-col mt-10 "
