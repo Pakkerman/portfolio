@@ -1,7 +1,12 @@
 import { type Theme } from '@/context/ThemeContext'
 import { toast } from 'react-hot-toast'
 
-export function ToasterHelper(msg: string, type: string, theme: Theme) {
+export function ToasterHelper(
+  msg: string,
+  type: string,
+  theme: Theme,
+  id: string = 'none'
+) {
   let style
 
   if (theme === 'dark') {
@@ -14,9 +19,9 @@ export function ToasterHelper(msg: string, type: string, theme: Theme) {
 
   switch (type) {
     case 'success':
-      return toast.success(msg, { style })
+      return toast.success(msg, { style, id })
     case 'error':
-      return toast.error(msg, { style })
+      return toast.error(msg, { style, id })
     default:
       return toast.error('you did not give me anything')
   }

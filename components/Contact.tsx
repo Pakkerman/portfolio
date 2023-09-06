@@ -9,6 +9,7 @@ import { sendEmail } from '@/actions/sendEmail'
 import SubmitButton from './SubmitButton'
 import { ToasterHelper } from '@/lib/toasterHelper'
 import { useThemeContext } from '@/context/ThemeContext'
+import toast from 'react-hot-toast'
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact')
@@ -16,7 +17,7 @@ export default function Contact() {
 
   function handleEmailCopyClick() {
     navigator.clipboard.writeText('pakkermandev@gmail.com')
-    ToasterHelper('Email copied to clipboard!', 'success', theme)
+    ToasterHelper('Email copied to clipboard!', 'success', theme, 'clipboard')
   }
 
   return (
