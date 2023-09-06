@@ -7,14 +7,16 @@ import { BiCopyAlt } from 'react-icons/bi'
 import { useSectionInView } from '@/lib/hooks'
 import { sendEmail } from '@/actions/sendEmail'
 import SubmitButton from './SubmitButton'
-import toast from 'react-hot-toast'
+import { ToasterHelper } from '@/lib/toasterHelper'
+import { useThemeContext } from '@/context/ThemeContext'
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact')
+  const { theme } = useThemeContext()
 
   function handleEmailCopyClick() {
     navigator.clipboard.writeText('pakkermandev@gmail.com')
-    toast.success('Email copied to clipboard!')
+    ToasterHelper('Email copied to clipboard!', 'success', theme)
   }
 
   return (
@@ -48,10 +50,10 @@ export default function Contact() {
         action={async (formData) => {
           const { data, error } = await sendEmail(formData)
           if (error) {
-            toast.error(error)
+            ToasterHelper(error, 'error', theme)
             return
           }
-          toast.success('Email successfully sent!')
+          ToasterHelper('Email successfully sent!', 'success', theme)
         }}>
         <input
           name="senderEmail"

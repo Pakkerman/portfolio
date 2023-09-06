@@ -2,14 +2,14 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
-type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark'
 type ThemeContext = { theme: Theme; toggleTheme: () => void }
 type ThemeContextProviderProps = { children: React.ReactNode }
 
 const ThemeContext = createContext<ThemeContext | null>(null)
 
 export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>('dark')
 
   function toggleTheme() {
     if (theme === 'light') {
