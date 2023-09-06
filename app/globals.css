@@ -2,21 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html { 
   --line-color: rgb(148, 163, 184);
 }
+html.dark { --line-color: rgb(51, 65, 85) }
 
-html.dark {
-  --line-color: rgb(51, 65, 85)
 
+.flex-center { @apply flex items-center justify-center; }
+
+.custom-button-pad { @apply px-6 py-3; }
+
+.custom-border{
+  @apply border outline-none border-black/10 dark:border-slate-50/10 focus:border-2;
+}
+
+.custom-hover-115 { @apply focus:scale-[1.15] hover:scale-[1.15] active:scale-105; }
+.custom-hover-110 { @apply focus:scale-[1.10] hover:scale-[1.10] active:scale-105; }
+
+.pre {
+  @apply bg-red-400 bg-opacity-30 sm:bg-blue-400 sm:bg-opacity-30 md:bg-green-400 md:bg-opacity-30 lg:bg-cyan-400 lg:bg-opacity-30;
 }
 
 
-.borderBlack{
-  @apply border border-black/10 dark:border-slate-50/10 ;
-}
-
-
-.pre {@apply bg-red-400 bg-opacity-30 sm:bg-blue-400 sm:bg-opacity-30 md:bg-green-400 md:bg-opacity-30 lg:bg-cyan-400 lg:bg-opacity-30;}
-
+/* width */
 

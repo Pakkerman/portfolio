@@ -54,7 +54,7 @@ export default function Header() {
                       stiffness: 380,
                       damping: 30,
                     }}
-                    className="absolute inset-0 bg-gray-100 rounded-full borderBlack -z-10 dark:bg-gray-700"
+                    className="absolute inset-0 bg-gray-100 rounded-full -z-10 dark:bg-gray-700 custom-border"
                   />
                 )}
               </Link>

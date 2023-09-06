@@ -10,10 +10,12 @@ import { useSectionInView } from '@/lib/hooks'
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
+    scale: 0.2,
     y: 100,
   },
   animate: (idx: number) => ({
     opacity: 1,
+    scale: 1,
     y: 0,
     transition: { delay: 0.05 * idx },
   }),
@@ -28,11 +30,11 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40 ">
       <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 ">
+      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((item, idx) => (
           <motion.li
             key={idx}
-            className="flex items-center gap-2 px-5 py-3 bg-white borderBlack rounded-xl dark:bg-slate-800"
+            className="flex items-center gap-2 px-5 py-3 bg-white custom-border rounded-xl dark:bg-slate-900"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"

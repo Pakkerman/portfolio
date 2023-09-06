@@ -26,7 +26,7 @@ export function ContactFormEmail({
       <Tailwind>
         <Body className="text-black bg-gray-100">
           <Container>
-            <Section className="px-10 py-4 my-10 bg-white rounded-md borderBlack">
+            <Section className="px-10 py-4 my-10 bg-white rounded-md custom-border">
               <Heading className="leading-tight">
                 You received the following message
               </Heading>

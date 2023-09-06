@@ -20,7 +20,7 @@ export default function Intro() {
       id="home"
       ref={ref}
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-96">
-      <div className="flex items-center justify-center">
+      <div className="flex-center">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -33,7 +33,7 @@ export default function Intro() {
               height="150"
               quality="95"
               priority={true}
-              className="object-cover w-24 h-24 border-4 rounded-full shadow-xl border-slate-100 dark:border-slate-700"
+              className="object-cover w-24 h-24 rounded-full shadow-xl custom-border"
             />
           </motion.div>
           {/* <motion.span
@@ -61,7 +61,7 @@ export default function Intro() {
         <span className="underline">React (Next.js)</span>
       </motion.h1>
       <motion.div
-        className="flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row sm:gap-2"
+        className="flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row sm:gap-4"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}>
@@ -71,29 +71,29 @@ export default function Intro() {
             setTimeOfLastClick(Date.now())
             setActiveSection('Contact')
           }}
-          className="flex items-center gap-2 py-3 text-white transition bg-gray-900 rounded-full outline-none group px-7 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105">
-          Contact me here{' '}
+          className="flex items-center gap-2 text-white transition-all rounded-full outline-none custom-button-pad bg-slate-900 group custom-hover-110 custom-border">
+          Contact Me{' '}
           <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
         </Link>
 
         <a
           href="/CV.pdf"
           download
-          className="flex items-center gap-2 py-3 transition bg-white border rounded-full outline-none cursor-pointer border-black/10 group px-7 focus:scale-110 hover:scale-110 active:scale-105 dark:bg-white/10">
+          className="flex items-center gap-2 py-3 transition bg-white rounded-full outline-none cursor-pointer group px-7 custom-hover-110 dark:bg-white/10 custom-border">
           Download CV{' '}
           <HiDownload className="transition group-hover:translate-y-1 opacity-60" />
         </a>
-        <div className="flex gap-10 sm:gap-2">
+        <div className="flex gap-10 sm:gap-4">
           <a
             href="https://linkedin.com"
             target="_blank"
-            className="flex items-center gap-2 p-4 text-gray-950 transition bg-white border rounded-full h-14 w-14 justify-center cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10 dark:text-white/80 dark:bg-white/10">
+            className="gap-2 p-4 transition bg-white rounded-full cursor-pointer flex-center text-gray-950 h-14 w-14 custom-hover-115 dark:text-white/80 dark:bg-white/10 custom-border">
             <BsLinkedin />
           </a>
           <a
             href="https://github.com/Pakkerman"
             target="_blank"
-            className="flex text-[1.35rem] items-center gap-2 p-4 text-gray-950 transition bg-white border dark:text-white/80 rounded-full cursor-pointer foucs:scale-[1.15] hover:scale-[1.15] active:scale-105 border-black/10 dark:bg-white/10 w-14 h-14 justify-center">
+            className="flex text-[1.35rem] items-center gap-2 p-4 text-gray-950 transition bg-white dark:text-white/80 rounded-full cursor-pointer custom-hover-115  dark:bg-white/10 w-14 h-14 justify-center custom-border">
             <FaGithubSquare />
           </a>
         </div>
