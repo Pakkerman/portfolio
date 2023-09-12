@@ -58,7 +58,7 @@ export const experiencesData = [
   },
   {
     title: 'Completed Harvard CS50 Course',
-    location: 'Shenzhen',
+    location: '',
     description: 'I complete the course in 6 months.',
     icon: React.createElement(LuGraduationCap),
     date: '2023',
@@ -69,7 +69,7 @@ export const experiencesData = [
     description:
       'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
     icon: React.createElement(CgWorkAlt),
-    date: '2019 - 2021',
+    date: '2013',
   },
   {
     title: 'Full-Stack Developer',
