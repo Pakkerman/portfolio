@@ -50,10 +50,16 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: 'Graduated from Shin Hsin University',
+    location: 'Taipei',
+    description: 'Major in Media and Game Design',
+    icon: React.createElement(LuGraduationCap),
+    date: '2015',
+  },
+  {
     title: 'Completed Harvard CS50 Course',
-    location: '',
-    description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+    location: 'Shenzhen',
+    description: 'I complete the course in 6 months.',
     icon: React.createElement(LuGraduationCap),
     date: '2023',
   },
