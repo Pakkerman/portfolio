@@ -13,7 +13,7 @@ html.dark { --line-color: rgb(51, 65, 85) }
 .custom-button-pad { @apply px-6 py-3; }
 
 .custom-border{
-  @apply border outline-none border-black/10 dark:border-slate-50/10 focus:border-2;
+  @apply border outline-none border-black/10 dark:border-slate-50/10;
 }
 
 .custom-hover-115 { @apply focus:scale-[1.15] hover:scale-[1.15] active:scale-105; }
